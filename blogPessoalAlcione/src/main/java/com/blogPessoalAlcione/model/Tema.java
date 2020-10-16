@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import com.blogPessoalAlcione.model.Postagem;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -29,24 +29,32 @@ public class Tema {
 	@OneToMany(mappedBy = "tema", cascade=CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
 	private List <Postagem> postagem;
+
 	public long getId() {
 		return id;
 	}
+
 	public void setId(long id) {
 		this.id = id;
 	}
+
 	public String getDescricao() {
 		return descricao;
 	}
+
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+
 	public List<Postagem> getPostagem() {
 		return postagem;
 	}
+
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	}
+	
+	
 
 	
 	

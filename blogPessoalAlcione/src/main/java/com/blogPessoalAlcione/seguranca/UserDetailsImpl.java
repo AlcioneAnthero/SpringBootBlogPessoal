@@ -9,7 +9,7 @@ import com.blogPessoalAlcione.model.Usuario;
 
 public class UserDetailsImpl implements UserDetails {
 
-	private static final long seialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	
 	
 	

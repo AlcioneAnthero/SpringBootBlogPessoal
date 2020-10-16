@@ -21,6 +21,7 @@ public class UsuarioService {
 	private UsuarioRepository repository;
 	
 	// metodo publico que vai receber o usuario e vai retornar o usuario
+	
 	public Usuario CadastrarUsuario (Usuario usuario) {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		
@@ -32,6 +33,7 @@ public class UsuarioService {
 	}
 	
 		// LOGAR -  METODOS PUBLIC 
+	
 		public Optional<UserLogin> Logar(Optional<UserLogin> user) {
 			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();	
 			Optional<Usuario> usuario = repository.findByUsuario(user.get(). getUsuario());

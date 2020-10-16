@@ -25,7 +25,8 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 		auth.userDetailsService(userDetailsService); // assim que esse método for chamado, o objeto auth (coocado como
 														// parâmetro) vai ser chamado com o método injetado
 	}
-	// Anotação Bean = ?
+	// Anotação Bean = criptografia uma senha, deixando esse método disponível para todas as classes e caso tenha algum problema ele roda até encontrar e rodas na bean
+
 	// método para password que não recebe nada como parâmetro
 	@Bean
 	public PasswordEncoder passWordEncoder() {
@@ -43,4 +44,10 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 		.and().cors()/*comando para habilitar o cors dentro da camada security*/
 		.and().csrf().disable();/*para desabilitar as configurações do csrf, para utilizar todas as configurações padrões*/
 	}
+	
+	
+	
+	
+	
+	
 }
